@@ -1,23 +1,34 @@
-/* Make the whole page look fresh */
+/* Giving the whole page that BOTW look */
 body {
   font-family: "Copperplate", "Trebuchet MS", sans-serif;
   color: #000000;
+  
+  font-size: medium;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: 2px 2px 5px #00FFFF; 
+} 
+
+body::before{
+  content: ""; /* required for pseudo-elements */
+  position: fixed; /* makes it stay in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(images/BOTW-Link.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-size: medium;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  text-shadow: 2px 2px 5px #00FFFF; /* x-offset, y-offset, blur, color */
-  /* letter-spacing: 2px;*/
-} 
+  opacity: 0.88888;
+  z-index: -1; /* places it behind all content */
+}
 
 
 
-/* Style your headings */
+/* Making headings look fanc  */
 h1 {
   font-size: 3rem;
   margin-top: 50px;
@@ -71,4 +82,11 @@ color: #000000;
 .tab.active {
   background: #444444b9;
   color: rgb(255, 255, 255);
+}
+.tab-content{
+  display: none;
+}
+
+.tab-content.active{
+  display: block;
 }
