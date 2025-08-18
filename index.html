@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thauhir Site</title>
-    <link rel="stylesheet" href="stlye.css">
-</head>
-<body>
-    
-<header>
-    <h1>Welcome to Thauhir's Site</h1>
-    <p id="secrets" >Future Developer | Future Problem solver</p>
-</header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thauhir Site</title>
+        <link rel="stylesheet" href="stlye.css">
+    </head>
+    <body>
+        
+        <header>
+            <h1>Welcome to Thauhir's Site</h1>
+            <p id="secrets" >Future Developer | Future Problem solver</p>
+        </header>
 
 
-<section>
+        <section>
 
 
-    <div class="tabs">
+            <div class="tabs">
 
-        <span class="tab active">Welcome Page</span>
-        <span class="tab">About Me</span>
-        <span class="tab">Contact Me</span>
+                <span class="tab active" data-target="welcome">  Welcome Page</span>
+                <span class="tab" data-target="about-me">About Me</span>
+                <span class="tab" data-target="contact-me">Contact Me</span>
 
-    </div>
-    <h2>About me</h2>
-    <p>
-        Father of 2, Awesome husband to the most amazing wife, casual gamer, casual car enthusiast and tech enthusiast
-        <br>
-        A little bit about me, have over 2 years of experience as a developer. 1 year at capita and 1 year and 2 months  at Disruption Labs <br>
-        Very Grateful for the opportunites that i was given<br>
+            </div>
+
+            <div class="tab-content active" id="welcome">
+                <h2>Welcome Page</h2>
+                <p>
+                    This is the home section.<br>
+                    I dont have much to put here as of now <br> 
+                    but once i think of something i will change it
+                </p>
+            </div>
+
+
+            <div class="tab-content" id="about-me">
+
+             
+             <p>
+
+                <h2>About me</h2>
+
+
+                Father of 2, Awesome husband to the most amazing wife, casual gamer, casual car enthusiast and tech enthusiast
+                <br>
+                A little bit about me, have over 2 years of experience as a developer. 1 year at capita and 1 year and 2 months  at Disruption Labs <br>
+                Very Grateful for the opportunites that i was given<br>
 
 
 
-    </p>
-</section>
+             </p>
 
-</body>
+            </div>
+
+            <div class="tab-content" id="contact-me">
+                <h2>Contact</h2>
+                <p>Reach me at thauhir@gmail.com </p>
+
+                <!-- I plan on making an email me section where user can enter user email, subject and body content -->
+            </div>
+
+
+            
+           
+        </section>
+
+    </body>
 </html>
+
+<script src="tools.js"></script>
