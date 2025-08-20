@@ -37,7 +37,7 @@ h1 {
 
 /* Add some buttons */
 button {
-  background: #00ffff8a;
+  background: #00ffff41;
   border: none;
   padding: 12px 24px;
   color: white;
@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-  background: #ff4040;
+  background: #00ffffc4;
 }
  
 
