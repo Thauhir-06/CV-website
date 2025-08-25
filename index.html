@@ -10,7 +10,7 @@
         
         <header>
             <h1>Welcome to Thauhir's Site</h1>
-            <p id="secrets" >Future Developer | Future Problem solver</p>
+            <p id="secrets" >Future Software Developer | Future Problem solver</p>
         </header>
 
 
@@ -31,7 +31,10 @@
                     I am Thauhir Benjamin (BenG is fine).<br>
                     I created this site to re-learn coding and <br>
                     just have a project that I can come to and  <br> 
-                    just practice some things that I've learnt
+                    just practice some things that I've learnt <br>
+
+                    This website is made using HTML,CSS and JavaScript <br>
+                    Only the front end is working and im currently working on getting the Contact  section to work 
                     
                 </p>
             </div>
@@ -58,15 +61,17 @@
 
             <div class="tab-content" id="contact-me">
                 <h2>Contact</h2>
-               <h3>Lets connect, dont be shy</h3>
+               <h3>Don't be shy, Lets connect </h3>
 
                 <form >
+
+                    <input type="name" name="name" placeholder="Your name"> <br><br>
                     
-                    <input type="email" placeholder="Your email"> <br><br>
+                    <input type="email" name="email" placeholder="Your email"> <br><br>
 
-                    <input type="email" placeholder=" Subject"> <br><br>
+                    <input type="subject" name="subject" placeholder=" Subject"> <br><br>
 
-                    <textarea type="email" placeholder="Enter Message" rows="6" cols="40"></textarea> <br><br>
+                    <textarea type="message" name="message" placeholder="Enter Message" rows="6" cols="40"></textarea> <br><br>
 
                     <button type="submit">Send</button>  
 
@@ -75,7 +80,7 @@
 
                 
 
-                <!-- I plan on making an email me section where user can enter user email, subject and body content -->
+                
             </div>
 
 
@@ -86,4 +91,38 @@
     </body>
 </html>
 
+<!-- Javascript file of EmailJS Script -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "GfpvZFipyclzJlm5u",
+      });
+   })();
+
+
+
+   // 2. Get the form and listen for submit event
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop form from refreshing page
+
+    // 3. Send email using service ID, template ID, and form data
+    emailjs.sendForm("service_t25bsyk", "template_a1vjzuq", this)
+      .then(function() {
+        alert("✅ Email sent successfully!");
+      }, function(error) {
+        alert("❌ Failed to send email: " + JSON.stringify(error));
+      });
+  });
+
+
+
+
+</script>
+
+
+
+<!-- my javascript file -->
 <script src="tools.js"></script>
